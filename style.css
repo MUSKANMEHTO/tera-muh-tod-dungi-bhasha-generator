@@ -1,0 +1,109 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background: url('https://i.postimg.cc/FR687nHL/jpg-3.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ff66c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container Box */
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3); /* Glassmorphism background */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 0 25px #ff33cc80;
+  max-width: 750px;
+  width: 90%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Title Style */
+.title {
+  font-size: 2.7rem;
+  margin-bottom: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: glitch 1s infinite;
+}
+
+/* Quote Box */
+.quote-box {
+  font-size: 1.5rem;
+  padding: 25px;
+  border-left: 5px solid #ff33cc;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px #ff66c4aa;
+  margin-bottom: 30px;
+  min-height: 100px;
+  transition: all 0.3s ease;
+}
+
+.quote-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px #ff33cc;
+}
+
+/* Quote & Author Text */
+#quote {
+  color: #ff99dd;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff33cc;
+}
+
+#author {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #eee;
+  font-style: italic;
+}
+
+/* Button Style */
+button {
+  padding: 12px 30px;
+  background-color: #ff33cc;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff33cc;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #e600ac;
+  box-shadow: 0 0 20px #ff33cc, 0 0 30px #ff33cc;
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red; }
+  20% { text-shadow: -2px 0 cyan; }
+  40% { text-shadow: 2px 0 lime; }
+  60% { text-shadow: -2px 0 yellow; }
+  80% { text-shadow: 2px 0 magenta; }
+  100% { text-shadow: -2px 0 red; }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
